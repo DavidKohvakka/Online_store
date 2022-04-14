@@ -1,0 +1,32 @@
+{
+  "name": "online_store",
+  "version": "1.0.0",
+  "description": "Simple version of the online store",
+  "main": "server.js",
+  "scripts": {
+    "sass": "sass --watch sass/bootstrap_onlineStore_theme.scss stylesheets/bootsrap_onlineStore_theme.css",
+    "dev": "nodemon server.js",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/DavidKohvakka/Online_store.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/DavidKohvakka/Online_store/issues"
+  },
+  "homepage": "https://github.com/DavidKohvakka/Online_store#readme",
+  "dependencies": {
+    "axios": "^0.26.1",
+    "bootstrap": "^5.1.3",
+    "bootstrap-icons": "^1.8.1",
+    "dotenv": "^16.0.0",
+    "ejs": "^3.0.2",
+    "express": "^4.17.3",
+    "jquery": "^3.6.0",
+    "nodemon": "^2.0.15",
+    "sass": "^1.50.0"
+  }
+}
