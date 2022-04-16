@@ -1,8 +1,12 @@
 require('dotenv').config({path: '.env'});
+require('./db/mongo_connect')
 
 const express = require('express');
-const routes = require('./routes/routes')
 const path = require('path')
+
+const routes = require('./routes/routes')
+
+
 
 const port = process.env.PORT || 3210;
 const app = express();
@@ -15,10 +19,7 @@ app.use('/js', express.static('node_modules/bootstrap/dist/js'))
 app.use('/js', express.static('node_modules/jquery/dist'))
 app.use(routes)
 
-app.get('/', (req, res) => {
-    res.send("jkdfös")
-})
 
-app.listen(port, ()=> {
+app.listen(port, ()=> { 
     console.log(`Server listening on port: ${port}`);
 });
