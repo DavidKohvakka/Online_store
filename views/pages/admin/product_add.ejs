@@ -1,0 +1,94 @@
+<html lang="en">
+<head>
+    <%- include('../../partials/head') %>
+    
+</head>
+<body class="">
+
+  <header >
+    <%- include('../../partials/admin/adminHeader') %>
+</header>
+
+<main style="min-height: 600px;" >
+
+  <div class="container-fluid">
+
+    <div class="row">
+
+      <div class="col-3    " style="min-height: 600px;">
+        <ul class="nav flex-column  m-4 mt-4">
+          <li class="nav-item my-1 ">
+            <a class="nav-link active" href="/admin/product/add">Add </a>
+          </li>
+          <li class="nav-item my-1">
+            <a class="nav-link" href="#">Update</a>
+          </li>
+          <li class="nav-item my-1">
+            <a class="nav-link" href="#">link</a>
+          </li>
+          <li class="nav-item my-1">
+            <a class="nav-link disabled" href="#" tabindex="-1" aria-disabled="true">Disabled</a>
+          </li>
+        </ul>  
+      </div><!--col-->
+
+        
+
+      <div class="col-6 ">
+
+        <form action="#" method=POST >
+          <div class="form-group mt-4">
+            <label for="product_id">Product ID</label>
+            <input type="text" class="form-control" name="product_id" id="product_id" placeholder="ASDF1234#SS231111" required>
+          </div>
+          <div class="form-group mt-2">
+            <label for="name">Name</label>
+            <input type="text" class="form-control" name="name" id="name" placeholder="Laptop-123" required>
+          </div>
+          <div class="form-group mt-2">
+            <label for="price">Price</label>
+            <input type="text" class="form-control" name="price" id="price" placeholder="0,00" required>
+          </div>
+          <div class="form-group mt-2">
+            <label for="category">Select category</label>
+            <select class="form-control" id="category" name="category">
+              <option>-</option>
+              <% if (locals.categories) {categories.forEach((item) => {%>
+                <option reguired><%= item.category%></option>
+              <%})}%>
+       
+            </select>
+          </div>
+          <div class="form-group mt-2 ms-5">
+            <label for="newCategory">Add new category</label>
+            <input type="text" class="form-control" name="newCategory" id="newCategory" placeholder="Space rocket">
+          </div>
+        
+          <div class="form-group mt-2">
+            <label for="information">Additional Informations</label>
+            <textarea type="text" class="form-control" id="information" name="information" rows="3" required></textarea>
+          </div>
+
+          <button type="submit" class="btn btn-primary mt-2">Send</button>  
+
+        </form>
+
+        
+
+
+
+      </div><!--col-->
+
+    </div><!--row-->
+  </div><!--container-->
+
+</main>
+
+<footer class=" border-top p-2 bg-light" style="height: 200px">
+    <%- include('../../partials/footer')%> 
+</footer>
+
+<%- include('../../partials/scripts') %>  
+    
+</body>
+</html>

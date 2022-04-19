@@ -4,17 +4,57 @@
 </head>
 <body class="">
 
-    <header >
-        <%- include('../partials/header') %>
-    </header>
+<header >
+    <%- include('../partials/header') %>
+</header>
 
-    <main style="height: 600px;" >
+<main style="min-height: 600px;" >
 
-    </main>
+    <div class="container-fluid">
+  
+      <div class="row">
+  
+        <div class="col-3    " style="min-height: 600px;">
+          <ul class="nav flex-column  m-4 mt-4">
+            <li class="nav-item my-1 ">
+              <a class="nav-link active" href="#">All</a>
+            </li>
+            <% if(locals.categories) {
+                categories.forEach((item) => { %>
+                    <li class="nav-item my-1">
+                        <a class="nav-link" href="#"><%=item.category%></a>
+                      </li>
+                <%})
+            } %>
 
-    <footer class="fixed-bottom border-top p-2 bg-light" style="height: 200px">
-        <%- include('../partials/footer')%> 
-    </footer>
+        </div><!--col-->
+        
+          
+  
+        <div class="col">
+            
+            <% if(locals.products) {
+                products.forEach((item) => { %>
+                    <li class="nav-item my-1">
+                        <a class="nav-link" href="#"><%=item.category%></a>
+                      </li>
+                <%})
+            } %>
+
+            
+  
+  
+        </div><!--col-->
+  
+      </div><!--row-->
+    </div><!--container-->
+  
+</main>
+
+
+<footer class=" border-top p-2 bg-light" style="height: 200px">
+    <%- include('../partials/footer')%> 
+</footer>
     
     <%- include('../partials/scripts')%>
 </body>
