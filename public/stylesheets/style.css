@@ -2,6 +2,10 @@
     font-size: small;
 }
 
+.product-price {
+    font-weight: 600;
+}
+
 .logo {
     font-size: 28;
     font-weight: 300;
