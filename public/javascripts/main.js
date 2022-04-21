@@ -8,3 +8,13 @@ for (let i = 0; i<menuItem.length; i++) {
         menuItem[i].classList.add('active')
     } 
 }
+
+
+//Go back from product page to latest products pages.
+const goBackLink = document.querySelector(".go_back")
+const historyGoBack = () => {
+
+    window.history.back()
+    //goBackLink.removeEventListener("click", historyGoBack)
+}
+goBackLink.addEventListener("click", historyGoBack)

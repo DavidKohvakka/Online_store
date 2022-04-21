@@ -6,6 +6,10 @@
     font-weight: 600;
 }
 
+.product-price .price-des {
+    font-size: small;
+}
+
 .logo {
     font-size: 28;
     font-weight: 300;
